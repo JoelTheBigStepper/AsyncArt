@@ -22,7 +22,7 @@ app.use(cors({
     "http://localhost:3000",
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://velasturx.vercel.app",
+    "https://velastrux.vercel.app",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Velastrux-Token"],
