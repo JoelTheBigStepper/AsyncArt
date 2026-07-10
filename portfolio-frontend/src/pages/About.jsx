@@ -11,6 +11,7 @@ import {
   SiNodedotjs,
   SiMongodb,
   SiExpress,
+  SiTypescript,
 } from "react-icons/si";
 
 
@@ -20,6 +21,7 @@ const skills = [
   // { name: "CSS", icon: DiCss3 },
   { name: "JavaScript", icon: SiJavascript },
   { name: "React", icon: SiReact },
+  { name: "Typescript", icon: SiTypescript },
   { name: "Tailwind", icon: SiTailwindcss },
   { name: "Git", icon: SiGit },
   { name: "Node.js", icon: SiNodedotjs },
