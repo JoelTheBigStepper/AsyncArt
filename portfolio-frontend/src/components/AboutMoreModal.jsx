@@ -35,37 +35,34 @@ export default function AboutMoreModal({ isOpen, onClose }) {
 
           <div className="space-y-4 leading-relaxed">
             <p>
-              I'm <span className="font-bold text-flame">Joel Ojo</span>, a
-              Full-Stack Developer focused on building modern, scalable, and
+              I am <span className="font-bold text-flame">Joel Ojo</span>, a
+              Full Stack Developer focused on creating modern, scalable, and
               visually refined web applications.
             </p>
             <p>
-              I work with <span className="font-bold text-cobalt">React</span>,{" "}
+              I work extensively with <span className="font-bold text-cobalt">React</span>,{" "}
               <span className="font-bold text-cobalt">TailwindCSS</span>,{" "}
               <span className="font-bold text-cobalt">Node.js</span>, and{" "}
-              <span className="font-bold text-cobalt">Express</span> to create
-              responsive, user-focused applications that balance performance
+              <span className="font-bold text-cobalt">Express</span> to build
+              responsive applications that balance performance
               with clean design.
             </p>
             <p>
-              I build full-stack systems with real-world functionality,
-              structuring applications for scalability, maintainability, and
-              efficient data handling using{" "}
-              <span className="font-bold text-cobalt">MongoDB</span>.
+              Using <span className="font-bold text-cobalt">MongoDB</span>, I structure robust systems designed for maintainability and efficient data handling.
             </p>
             <p>
-              I also have experience working with APIs and backend services,
-              integrating dynamic data into applications and designing systems
-              that handle real user interactions.
+              My development experience involves architecting production ready systems that prioritize both security and the developer experience. I have built dynamic dashboards featuring resilient proxy layers, exponential backoff, and webhooks signed with HMAC SHA256.
             </p>
             <p>
-              Beyond development, I'm expanding my knowledge in{" "}
+              I also create specialized platforms, such as a medication authentication system equipped with a custom GS1 DataMatrix barcode parser, fuzzy matching engines, and AI explanations powered by Claude. I maintain strict security standards across my applications by utilizing server side token attachment and per device session revocation.
+            </p>
+            <p>
+              Additionally, I have strong experience working with APIs and backend services to integrate dynamic data and manage real user interactions. I am currently expanding my knowledge in{" "}
               <span className="font-bold text-flame">Python</span> and
-              exploring <span className="font-bold text-flame">cybersecurity</span>,
-              with a focus on building secure and reliable systems.
+              exploring <span className="font-bold text-flame">cybersecurity</span> to further my ability to build secure and reliable systems.
             </p>
             <p>
-              I prioritize clarity, consistency, and attention to detail,
+              I always prioritize clarity, consistency, and attention to detail,
               ensuring every project feels polished, functional, and
               impactful.
             </p>

@@ -34,7 +34,7 @@ export default function About() {
       className="px-6 md:px-16 py-20 bg-paper dark:bg-void text-ink dark:text-white scroll-mt-10"
     >
       <div className="container mx-auto flex flex-col md:flex-row gap-16 items-start">
-        {/* LEFT — Text */}
+        {/* LEFT, Text */}
         <motion.div
           className="flex-1 space-y-6"
           initial={{ opacity: 0, x: -30 }}
@@ -47,18 +47,16 @@ export default function About() {
           </h2>
 
           <p className="text-lg leading-relaxed max-w-xl text-ink/80 dark:text-white/80">
-            I'm Joel, a Full-Stack Developer focused on building seamless,
-            high-performance digital experiences. I work with React, Node.js,
-            Express, and MongoDB to create scalable applications that balance
-            functionality with clean, refined design, ensuring reliability in
-            real-world use cases.
+            I am Joel, a Full Stack Developer dedicated to building seamless and high performance digital experiences. I utilize React, Node.js, Express, and MongoDB to create scalable applications that balance functionality with clean and refined design.
           </p>
 
           <blockquote className="border-l-[3px] border-flame pl-4 italic text-ink/70 dark:text-white/70 max-w-lg">
-            "I prioritize clarity, consistency, and visual balance in every
-            project, from backend architecture to responsive, user-focused
-            interfaces."
+            "I prioritize clarity, consistency, and visual balance in every project, ensuring reliability across both backend architecture and responsive user interfaces."
           </blockquote>
+          
+          <p className="text-lg leading-relaxed max-w-xl text-ink/80 dark:text-white/80">
+            My projects involve solving complex technical challenges, including managing rate limits, implementing strict JWT authentication, and engineering real time collaborative environments.
+          </p>
 
           <button
             onClick={() => setIsModalOpen(true)}
@@ -68,7 +66,7 @@ export default function About() {
           </button>
         </motion.div>
 
-        {/* RIGHT — Skills */}
+        {/* RIGHT, Skills */}
         <motion.div
           className="flex-1 grid grid-cols-3 gap-5 w-full max-w-lg"
           initial={{ opacity: 0, x: 30 }}
