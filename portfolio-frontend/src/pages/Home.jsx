@@ -13,25 +13,22 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-14">
-          {/* Left — Text */}
+          {/* Left, Text */}
           <div className="flex-1 space-y-7 text-center md:text-left">
             <span className="inline-block rotate-2 bg-acid text-ink font-mono text-sm px-3 py-1 border-brut shadow-brut-sm">
               Available for work
             </span>
 
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-display leading-[0.95] uppercase">
-              Hi, I'm Joel.
+              Hi, I am Joel.
               <br />
-              <span className="text-cobalt">Full-Stack</span>
+              <span className="text-cobalt">Full Stack</span>
               <br />
               Developer.
             </h1>
 
             <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-ink/80 dark:text-white/80">
-              I build modern, scalable, and responsive web applications with React,
-              Node.js, and Express — including secure email communication and
-              verification with Nodemailer and Mailboxlayer, backed by MongoDB.
-              Functionality, scalability, and user-focused design, every time.
+              I build modern, scalable, and responsive web applications using React, Node.js, and Express, backed by MongoDB. My work consistently delivers functionality, scalability, and user focused design. I engineer robust solutions capable of handling real world complexity, ranging from AI powered medication verification platforms to dynamic REST API dashboard generators.
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
@@ -50,7 +47,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right — Portrait */}
+          {/* Right, Portrait */}
           <motion.div
             className="flex-1 flex justify-center relative w-full max-w-sm md:max-w-md"
             initial={{ x: 60, opacity: 0, rotate: 4 }}
