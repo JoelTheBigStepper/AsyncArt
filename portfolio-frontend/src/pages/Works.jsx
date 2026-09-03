@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import WorkProjectCard from "../components/WorkProjectCard";
 import ProjectModeToggle from "../components/ProjectModeToggle";
-import realWorldProjects from "../data/realWorldProjects";
+import demoProject from "../data/demoProjects";
 
 export default function Works() {
   const [mode, setMode] = useState("real");
@@ -28,7 +28,7 @@ export default function Works() {
     }
   };
 
-  const activeProjects = mode === "real" ? realWorldProjects : demoProjects;
+  const activeProjects = mode === "real" ? demoProjects : demoProject;
 
   return (
     <section
@@ -53,7 +53,7 @@ export default function Works() {
 
         <ProjectModeToggle mode={mode} setMode={setMode} />
 
-        {mode === "demo" && isLoading ? (
+        {mode === "real" && isLoading ? (
           <div className="py-12">
             <p className="font-mono text-ink/60 dark:text-white/60">Loading projects...</p>
           </div>
@@ -65,7 +65,7 @@ export default function Works() {
           </div>
         ) : (
           <p className="text-ink/70 dark:text-white/70 font-mono">
-            No {mode === "real" ? "products" : "demo projects"} added yet.
+            No {mode === "demo" ? "products" : "demo projects"} added yet.
           </p>
         )}
       </div>
