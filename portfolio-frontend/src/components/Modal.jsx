@@ -31,7 +31,7 @@ export default function Modal({ isOpen, onClose, project }) {
 
           {project.image ? (
             <div className="w-full h-52 border-b-[3px] border-ink dark:border-white overflow-hidden">
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img src={project.image} alt={project.title} className="w-full h-full object-contain bg-ink" />
             </div>
           ) : (
             <div className="w-full h-24 bg-cobalt border-b-[3px] border-ink dark:border-white" />

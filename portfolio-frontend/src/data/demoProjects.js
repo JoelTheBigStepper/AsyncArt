@@ -1,20 +1,22 @@
 // Portfolio/demo projects built during the daily web project challenge.
 // Add `code` and `demo` links as they become public.
 
+import aetoirImage from "../assets/aetoir.png";
+import arceronImage from "../assets/arceron.png";
+import forgeImage from "../assets/forge.png";
+import lumaImage from "../assets/luma.png";
+import makewayImage from "../assets/makeway.png";
+import northlineImage from "../assets/northline.png";
+import reicusImage from "../assets/reicus.png";
+import tendImage from "../assets/tend.png";
+import vantaImage from "../assets/vanta.png";
+import vestienImage from "../assets/vestien.png";
+import kairoImage from "../assets/kairo.png";
+
 const demoProjects = [
-  // {
-  //   id: "restatora",
-  //   title: "Restatora",
-  //   tagline: "A simpler way to discover and enjoy great food",
-  //   description:
-  //     "A modern restaurant website designed around everyday usability rather than visual complexity. It gives visitors a clear path to explore the menu, discover the restaurant, view key information, and take action.",
-  //   stack: ["React", "Tailwind CSS", "JavaScript"],
-  //   code: "",
-  //   demo: "",
-  //   accent: "flame",
-  // },
   {
     id: "forge",
+    image: forgeImage,
     title: "Forge",
     tagline: "A focused digital experience for modern fitness",
     description:
@@ -26,6 +28,7 @@ const demoProjects = [
   },
   {
     id: "luma",
+    image: lumaImage,
     title: "Luma Dental",
     tagline: "Clear information for better patient decisions",
     description:
@@ -37,6 +40,7 @@ const demoProjects = [
   },
   {
     id: "vanta",
+    image: vantaImage,
     title: "VANTA",
     tagline: "Property discovery built around visual confidence",
     description:
@@ -48,6 +52,7 @@ const demoProjects = [
   },
   {
     id: "northline",
+    image: northlineImage,
     title: "NorthLine",
     tagline: "Projects, capabilities, and credibility in one place",
     description:
@@ -57,19 +62,9 @@ const demoProjects = [
     demo: "https://northline-woad.vercel.app",
     accent: "cobalt",
   },
-  // {
-  //   id: "luxury-law-firm",
-  //   title: "Sterling & Ashworth",
-  //   tagline: "A premium digital presence for a modern law firm",
-  //   description:
-  //     "A sophisticated law firm website focused on credibility, clarity, and consultation conversion. The experience combines strong typography, structured practice areas, attorney profiles, expertise sections, and a polished responsive layout.",
-  //   stack: ["React", "Tailwind CSS", "JavaScript"],
-  //   code: "",
-  //   demo: "",
-  //   accent: "cobalt",
-  // },
   {
     id: "reicus",
+    image: reicusImage,
     title: "Reicus",
     tagline: "A digital experience built around the stay",
     description:
@@ -81,17 +76,31 @@ const demoProjects = [
   },
   {
     id: "tend",
+    image: tendImage,
     title: "Tend",
     tagline: "When Something Matter, Bring People Together",
     description:
-      "An aviation and travel experience designed around the feeling of movement. Route-focused visuals, cinematic presentation, spatial transitions, travel information, and purposeful animation create a more immersive experience than a conventional travel website.",
+      "A fundraising platform designed to bring people together around causes that matter. Tend helps organizations share their stories, build trust with supporters, and turn interest into meaningful contributions through a warm, engaging experience.",
     stack: ["React", "Tailwind CSS", "JavaScript", "Framer Motion"],
     code: "",
     demo: "https://tend-olive.vercel.app",
     accent: "flame",
   },
   {
+    id: "kairo",
+    image: kairoImage,
+    title: "Kairo",
+    tagline: "A premium digital presence for a modern law firm",
+    description:
+      "A sophisticated law firm website focused on credibility, clarity, and consultation conversion. The experience combines strong typography, structured practice areas, attorney profiles, expertise sections, and a polished responsive layout.",
+    stack: ["React", "Tailwind CSS", "JavaScript"],
+    code: "",
+    demo: "https://kairo-lemon-nine.vercel.app/",
+    accent: "cobalt",
+  },
+  {
     id: "arceron",
+    image: arceronImage,
     title: "ARCERON",
     tagline: "Architecture presented as visual editorial",
     description:
@@ -103,6 +112,7 @@ const demoProjects = [
   },
   {
     id: "vestien",
+    image: vestienImage,
     title: "VESTIEN",
     tagline: "The form of Motion",
     description:
@@ -112,41 +122,9 @@ const demoProjects = [
     demo: "https://vestien.vercel.app/",
     accent: "flame",
   },
-  // {
-  //   id: "interior-design-studio",
-  //   title: "Interior Design Studio",
-  //   tagline: "Spaces turned into an editorial experience",
-  //   description:
-  //     "A visually driven interior design studio website where completed spaces act as the primary interface. Featured projects, project archives, materials, design philosophy, galleries, services, and studio information are arranged with deliberate composition and whitespace.",
-  //   stack: ["React", "Tailwind CSS", "JavaScript"],
-  //   code: "",
-  //   demo: "",
-  //   accent: "cobalt",
-  // },
-  // {
-  //   id: "photography-portfolio",
-  //   title: "Photography Portfolio",
-  //   tagline: "Images first, interface second",
-  //   description:
-  //     "An immersive photography portfolio that treats photography as the main navigation system. Collections, stories, project pages, categories, about information, and contact flows use unconventional image arrangements, whitespace, and subtle transitions.",
-  //   stack: ["React", "Tailwind CSS", "JavaScript"],
-  //   code: "",
-  //   demo: "",
-  //   accent: "flame",
-  // },
-  {
-    id: "car-dealership",
-    title: "Car Dealership",
-    tagline: "A conversion-focused digital showroom",
-    description:
-      "A premium dealership experience focused on helping buyers discover vehicles and move toward a decision. Vehicle listings, detailed vehicle pages, complex filtering, finance calculator interactions, lead capture, responsive layouts, and polished vehicle motion are combined into one practical experience.",
-    stack: ["React", "Tailwind CSS", "JavaScript", "Interactive UI"],
-    code: "",
-    demo: "",
-    accent: "cobalt",
-  },
   {
     id: "aetoir",
+    image: aetoirImage,
     title: "Aetoir",
     tagline: "Less, but louder",
     description:
@@ -158,6 +136,7 @@ const demoProjects = [
   },
   {
     id: "makeway",
+    image: makewayImage,
     title: "Makeway",
     tagline: "We make the way",
     description:

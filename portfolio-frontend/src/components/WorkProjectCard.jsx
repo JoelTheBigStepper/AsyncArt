@@ -21,7 +21,7 @@ export default function WorkProjectCard({ project }) {
       >
         {project.image ? (
           <div className="w-full h-44 border-b-[3px] border-ink dark:border-white overflow-hidden">
-            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-full object-contain bg-ink" />
           </div>
         ) : (
           <div className={`w-full h-28 border-b-[3px] border-ink dark:border-white ${accentClass} flex items-end p-4`}>
