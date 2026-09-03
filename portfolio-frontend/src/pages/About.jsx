@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import AboutMoreModal from "../components/AboutMoreModal";
 import {
   SiHtml5,
-  // DiCss3,
   SiJavascript,
   SiReact,
   SiTailwindcss,
@@ -14,19 +13,16 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-
-
 const skills = [
-  { name: "HTML", icon: SiHtml5 },
-  // { name: "CSS", icon: DiCss3 },
-  { name: "JavaScript", icon: SiJavascript },
-  { name: "React", icon: SiReact },
-  { name: "Typescript", icon: SiTypescript },
-  { name: "Tailwind", icon: SiTailwindcss },
-  { name: "Git", icon: SiGit },
-  { name: "Node.js", icon: SiNodedotjs },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "Express", icon: SiExpress },
+  { name: "HTML", icon: SiHtml5, rotate: "-rotate-2" },
+  { name: "JavaScript", icon: SiJavascript, rotate: "rotate-1" },
+  { name: "React", icon: SiReact, rotate: "rotate-2" },
+  { name: "TypeScript", icon: SiTypescript, rotate: "-rotate-1" },
+  { name: "Tailwind", icon: SiTailwindcss, rotate: "rotate-2" },
+  { name: "Git", icon: SiGit, rotate: "-rotate-2" },
+  { name: "Node.js", icon: SiNodedotjs, rotate: "rotate-1" },
+  { name: "MongoDB", icon: SiMongodb, rotate: "-rotate-1" },
+  { name: "Express", icon: SiExpress, rotate: "rotate-2" },
 ];
 
 export default function About() {
@@ -35,70 +31,65 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-16 md:py-20
-                 bg-white text-stone-900 dark:bg-black dark:text-white transition-colors duration-500 font-outfit scroll-mt-10"
+      className="px-6 md:px-16 py-20 bg-paper dark:bg-void text-ink dark:text-white scroll-mt-10"
     >
-      {/* LEFT - Text */}
-      <motion.div
-        className="flex-1 space-y-6"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl md:text-5xl font-bold">
-          About <span className="text-amber-500">Me</span>
-        </h2>
-
-        <p className="text-lg text-stone-600 dark:text-gray-300 leading-relaxed max-w-xl">
-          I’m Joel, a <span className="text-amber-500 font-semibold">Full-Stack Developer</span> focused on building seamless, high-performance digital experiences.
-          I work with <span className="text-amber-500">React</span>, <span className="text-amber-500">Node.js</span>, <span className="text-amber-500">Express</span>, and <span className="text-amber-500">MongoDB</span>,
-            to create scalable applications that balance functionality with clean, refined design, ensuring reliability in real-world use cases.
-            My approach combines technical excellence with user-focused design, delivering solutions that are both powerful and intuitive.
-        </p>
-
-        <blockquote className="border-l-4 border-amber-500 pl-4 italic text-stone-600 dark:text-gray-400 max-w-lg">
-          “I prioritize clarity, consistency, and visual balance in every project, from backend architecture to responsive, user-focused interfaces.”
-        </blockquote>
-
-        <motion.button
-          onClick={() => setIsModalOpen(true)}
-          className="mt-8 px-6 py-3 bg-amber-500 text-white rounded-lg font-semibold hover:bg-amber-600 transition"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+      <div className="container mx-auto flex flex-col md:flex-row gap-16 items-start">
+        {/* LEFT — Text */}
+        <motion.div
+          className="flex-1 space-y-6"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          More About Me
-        </motion.button>
-      </motion.div>
+          <h2 className="text-4xl md:text-5xl font-display uppercase">
+            About Me
+          </h2>
 
-      {/* RIGHT - Skills */}
-      <motion.div
-        className="flex-1 grid grid-cols-3 sm:grid-cols-3 gap-5 max-w-lg mt-12 md:mt-0"
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {skills.map(({ name, icon: Icon }) => (
-          <motion.div
-            key={name}
-            whileHover={{ scale: 1.08, y: -4 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="group flex flex-col items-center justify-center gap-2 p-4 rounded-xl
-                       bg-gradient-to-br from-stone-100 to-stone-50 dark:from-stone-900 dark:to-stone-800
-                       border border-stone-300/40 dark:border-stone-700/50
-                       shadow-sm hover:shadow-md hover:border-amber-500/60 transition-all duration-300"
+          <p className="text-lg leading-relaxed max-w-xl text-ink/80 dark:text-white/80">
+            I'm Joel, a Full-Stack Developer focused on building seamless,
+            high-performance digital experiences. I work with React, Node.js,
+            Express, and MongoDB to create scalable applications that balance
+            functionality with clean, refined design, ensuring reliability in
+            real-world use cases.
+          </p>
+
+          <blockquote className="border-l-[3px] border-flame pl-4 italic text-ink/70 dark:text-white/70 max-w-lg">
+            "I prioritize clarity, consistency, and visual balance in every
+            project, from backend architecture to responsive, user-focused
+            interfaces."
+          </blockquote>
+
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="press mt-4 px-6 py-3.5 bg-cobalt text-white border-brut shadow-brut font-mono uppercase tracking-tight font-bold"
           >
-            <div className="text-3xl text-amber-500 group-hover:text-amber-400 transition-colors">
-              <Icon />
-            </div>
-            <p className="text-sm font-semibold tracking-wide">{name}</p>
-          </motion.div>
-        ))}
-      </motion.div>
-  
-      {/* ===== POP-UP MODAL ===== */}
-     <AboutMoreModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            More About Me
+          </button>
+        </motion.div>
+
+        {/* RIGHT — Skills */}
+        <motion.div
+          className="flex-1 grid grid-cols-3 gap-5 w-full max-w-lg"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          {skills.map(({ name, icon: Icon, rotate }) => (
+            <motion.div
+              key={name}
+              whileHover={{ rotate: 0, scale: 1.05 }}
+              className={`${rotate} flex flex-col items-center justify-center gap-2 p-4 border-brut bg-paper dark:bg-ink shadow-brut-sm transition-transform`}
+            >
+              <Icon className="w-7 h-7 text-cobalt" />
+              <p className="text-xs font-mono uppercase tracking-tight">{name}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <AboutMoreModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

@@ -1,97 +1,77 @@
 import { motion } from "framer-motion";
 import myImage from "../assets/yh.png";
+import SkillTicker from "../components/SkillTicker";
 
 export default function Home() {
   return (
     <>
       <motion.section
         id="hero"
-        className="relative min-h-screen flex flex-col md:flex-row items-center justify-between gap-16 px-6 py-24 overflow-hidden 
-                   bg-white text-stone-900 dark:bg-black dark:text-white transition-colors duration-500"
+        className="relative px-6 pt-16 md:pt-20 pb-14 bg-paper dark:bg-void text-ink dark:text-white overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.6 }}
       >
-        {/* ===== Mobile Background Image (Blurred) ===== */}
-        <div
-          className="absolute inset-0 md:hidden bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${myImage})`,
-            filter: "blur(12px) brightness(0.5)",
-            transform: "scale(1.1)",
-          }}
-        ></div>
-        <div className="absolute inset-0 md:hidden bg-black/50"></div>
+        <div className="container mx-auto flex flex-col md:flex-row items-center gap-14">
+          {/* Left — Text */}
+          <div className="flex-1 space-y-7 text-center md:text-left">
+            <span className="inline-block rotate-2 bg-acid text-ink font-mono text-sm px-3 py-1 border-brut shadow-brut-sm">
+              Available for work
+            </span>
 
-        {/* ===== Left Side - Text ===== */}
-        <div className="flex-1 z-10 space-y-6 text-center md:text-left">
-          <motion.h2
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight font-outfit text-stone-900 dark:text-white"
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          >
-            Hi, I’m{" "}
-            <span className="text-amber-500 dark:text-amber-500">Joel</span>
-            <br />
-            A Full-Stack Developer
-          </motion.h2>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-display leading-[0.95] uppercase">
+              Hi, I'm Joel.
+              <br />
+              <span className="text-cobalt">Full-Stack</span>
+              <br />
+              Developer.
+            </h1>
 
-          <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0 font-outfit text-stone-700 dark:text-gray-300">
-           I build modern, scalable, and responsive web applications using{" "}
-            <span className="text-amber-600 font-semibold">React</span>,{" "}
-            <span className="text-amber-600 font-semibold">Node.js</span>, and{" "}
-            <span className="text-amber-600 font-semibold">Express</span>.  focusing on clean architecture and performance. I develop full-stack solutions that handle real-world functionality,  including secure email communication and verification using {" "}
-            <span className="text-amber-600 font-semibold">Nodemailer</span> and{" "}
-            <span className="text-amber-600 font-semibold">Mailboxlayer</span>, while efficiently managing data with {" "}
-            <span className="text-amber-600 font-semibold">MongoDB</span>.
-             My approach combines functionality, scalability, and user-focused design to deliver reliable digital experiences.
-          </p>
+            <p className="text-lg leading-relaxed max-w-xl mx-auto md:mx-0 text-ink/80 dark:text-white/80">
+              I build modern, scalable, and responsive web applications with React,
+              Node.js, and Express — including secure email communication and
+              verification with Nodemailer and Mailboxlayer, backed by MongoDB.
+              Functionality, scalability, and user-focused design, every time.
+            </p>
 
-          <motion.a
-            href="#contact"
-            className="inline-block bg-amber-600 text-white px-7 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-amber-700 transition-all duration-300"
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Get in Touch
-          </motion.a>
-        </div>
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+              <motion.a
+                href="#contact"
+                className="press inline-block bg-flame text-white px-7 py-4 border-brut shadow-brut font-mono uppercase tracking-tight font-bold"
+              >
+                Get in Touch
+              </motion.a>
+              <motion.a
+                href="#work"
+                className="press inline-block bg-transparent text-ink dark:text-white px-7 py-4 border-brut shadow-brut-sm font-mono uppercase tracking-tight font-bold"
+              >
+                See My Work
+              </motion.a>
+            </div>
+          </div>
 
-        {/* ===== Right Side (desktop only) ===== */}
-        <motion.div
-          className="hidden md:flex flex-1 justify-center relative"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          {/* Ambient Glow */}
+          {/* Right — Portrait */}
           <motion.div
-            className="absolute -inset-10 rounded-full blur-3xl -z-10
-                       bg-gradient-to-tr from-amber-400/20 to-transparent
-                       dark:from-amber-500/30 dark:to-transparent"
-            animate={{ scale: [1, 1.04, 1], opacity: [0.6, 1, 0.6] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
-
-          <motion.img
-            src={myImage}
-            loading="lazy"
-            alt="Joel portrait"
-            className="rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-lg shadow-2xl ring-1 ring-stone-200 dark:ring-stone-800 relative z-10"
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
-        </motion.div>
+            className="flex-1 flex justify-center relative w-full max-w-sm md:max-w-md"
+            initial={{ x: 60, opacity: 0, rotate: 4 }}
+            animate={{ x: 0, opacity: 1, rotate: -2 }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="absolute -top-4 -left-4 w-full h-full bg-cobalt border-brut" />
+            <img
+              src={myImage}
+              loading="lazy"
+              alt="Joel portrait"
+              className="relative w-full border-brut shadow-brut object-cover"
+            />
+            <span className="absolute -bottom-5 -right-5 bg-ink text-white dark:bg-white dark:text-ink font-mono text-xs px-3 py-2 border-brut rotate-3">
+              MERN Developer
+            </span>
+          </motion.div>
+        </div>
       </motion.section>
 
-      {/* Divider */}
-      <motion.hr
-        className="my-16 border-t w-[90%] mx-auto border-stone-300 dark:border-stone-700"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ duration: 1.2 }}
-        style={{ originX: 0.5 }}
-      />
+      <SkillTicker />
     </>
   );
 }

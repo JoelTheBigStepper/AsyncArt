@@ -1,56 +1,78 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { Github, ExternalLink } from "lucide-react";
+
+const accentMap = {
+  cobalt: "bg-cobalt",
+  flame: "bg-flame",
+};
 
 export default function WorkProjectCard({ project }) {
   const [isOpen, setIsOpen] = useState(false);
+  const accentClass = accentMap[project.accent] || "bg-cobalt";
 
   return (
     <>
       <motion.div
-        className="relative rounded-2xl overflow-hidden bg-white dark:bg-stone-900 shadow-md hover:shadow-2xl cursor-pointer transition-all duration-300"
-        whileHover={{ scale: 1.03, y: -3 }}
+        className="border-brut shadow-brut-sm hover:shadow-brut bg-paper dark:bg-ink cursor-pointer transition-shadow"
+        whileHover={{ y: -3 }}
         onClick={() => setIsOpen(true)}
       >
-        {/* Image with subtle gradient overlay */}
-        <div className="relative w-full h-48 overflow-hidden">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        </div>
+        {project.image ? (
+          <div className="w-full h-44 border-b-[3px] border-ink dark:border-white overflow-hidden">
+            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          </div>
+        ) : (
+          <div className={`w-full h-28 border-b-[3px] border-ink dark:border-white ${accentClass} flex items-end p-4`}>
+            <span className="font-mono text-white text-xs uppercase tracking-tight">
+              {project.tagline}
+            </span>
+          </div>
+        )}
 
-        {/* Content */}
         <div className="p-5">
-          <h3 className="text-lg font-semibold text-stone-900 dark:text-white mb-2">
-            {project.title}
-          </h3>
-          <p className="text-sm text-stone-600 dark:text-stone-400 line-clamp-2">
+          <h3 className="text-lg font-display uppercase mb-2">{project.title}</h3>
+          <p className="text-sm text-ink/70 dark:text-white/70 line-clamp-2 mb-4">
             {project.description || "A full-stack web project with modern tech."}
           </p>
 
-          <div className="flex items-center justify-between mt-4 space-x-3">
-            <a
-              href={project.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium border border-stone-300 dark:border-stone-700 px-3 py-1.5 rounded-lg hover:bg-stone-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FaGithub className="text-base" /> Code
-            </a>
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium bg-black text-white px-3 py-1.5 rounded-lg hover:bg-stone-800 dark:bg-white dark:text-black dark:hover:bg-stone-200 transition-all"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <FaExternalLinkAlt className="text-sm" /> Visit
-            </a>
+          {project.stack && (
+            <div className="flex flex-wrap gap-1.5 mb-4">
+              {project.stack.slice(0, 3).map((tech) => (
+                <span
+                  key={tech}
+                  className="font-mono text-[10px] uppercase px-2 py-1 border-[2px] border-ink dark:border-white"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <div className="flex items-center gap-3">
+            {project.code && (
+              <a
+                href={project.code}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="press flex items-center gap-1.5 text-xs font-mono uppercase font-bold border-brut px-3 py-1.5 shadow-brut-sm"
+              >
+                <Github className="w-3.5 h-3.5" /> Code
+              </a>
+            )}
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="press flex items-center gap-1.5 text-xs font-mono uppercase font-bold border-brut px-3 py-1.5 shadow-brut-sm bg-ink text-white dark:bg-white dark:text-ink"
+              >
+                <ExternalLink className="w-3.5 h-3.5" /> Visit
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
