@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import WorkProjectCard from "../components/WorkProjectCard";
 import ProjectModeToggle from "../components/ProjectModeToggle";
+import ProjectListModal from "../components/ProjectListModal";
 import demoProject from "../data/demoProjects";
 
 export default function Works() {
   const [mode, setMode] = useState("real");
   const [demoProjects, setDemoProjects] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
 
   useEffect(() => {
     fetchDemoProjects();
@@ -29,6 +31,8 @@ export default function Works() {
   };
 
   const activeProjects = mode === "real" ? demoProjects : demoProject;
+  const visibleProjects = activeProjects.slice(0, 6);
+  const projectGroupTitle = mode === "real" ? "Real-World Products" : "Client & Demo Work";
 
   return (
     <section
@@ -58,17 +62,36 @@ export default function Works() {
             <p className="font-mono text-ink/60 dark:text-white/60">Loading projects...</p>
           </div>
         ) : activeProjects.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {activeProjects.map((project, idx) => (
-              <WorkProjectCard key={project._id || project.id || idx} project={project} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visibleProjects.map((project, idx) => (
+                <WorkProjectCard key={project._id || project.id || idx} project={project} />
+              ))}
+            </div>
+
+            {activeProjects.length > 6 && (
+              <button
+                type="button"
+                onClick={() => setIsMoreOpen(true)}
+                className="press mt-8 border-brut shadow-brut-sm px-5 py-3 font-mono text-sm uppercase font-bold bg-flame text-white"
+              >
+                See more ({activeProjects.length - 6})
+              </button>
+            )}
+          </>
         ) : (
           <p className="text-ink/70 dark:text-white/70 font-mono">
             No {mode === "demo" ? "products" : "demo projects"} added yet.
           </p>
         )}
       </div>
+
+      <ProjectListModal
+        isOpen={isMoreOpen}
+        onClose={() => setIsMoreOpen(false)}
+        projects={activeProjects}
+        title={projectGroupTitle}
+      />
     </section>
   );
 }
