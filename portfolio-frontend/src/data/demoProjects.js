@@ -4,7 +4,7 @@
 const demoProjects = [
   {
     id: "luxury-law-firm",
-    title: "Luxury Law Firm",
+    title: "Sterling & Ashworth",
     tagline: "A premium digital presence for a modern law firm",
     description:
       "A sophisticated law firm website focused on credibility, clarity, and consultation conversion. The experience combines strong typography, structured practice areas, attorney profiles, expertise sections, and a polished responsive layout.",
@@ -25,8 +25,8 @@ const demoProjects = [
     accent: "flame",
   },
   {
-    id: "fitness-gym",
-    title: "Fitness Gym",
+    id: "forge",
+    title: "Forge",
     tagline: "A focused digital experience for modern fitness",
     description:
       "A modern fitness website built to make programs, classes, trainers, facilities, and membership information easy to understand. The interface uses clear hierarchy and purposeful interactions to guide visitors toward joining.",
@@ -36,8 +36,8 @@ const demoProjects = [
     accent: "cobalt",
   },
   {
-    id: "real-estate-agency",
-    title: "Real Estate Agency",
+    id: "vanta",
+    title: "VANTA",
     tagline: "Property discovery built around visual confidence",
     description:
       "A premium real estate experience centered on property discovery. Large imagery, structured listings, property categories, search and filtering, property details, agent information, and inquiry flows make the experience practical as well as visual.",
@@ -47,8 +47,8 @@ const demoProjects = [
     accent: "flame",
   },
   {
-    id: "construction-company",
-    title: "Construction Company",
+    id: "northline",
+    title: "NorthLine",
     tagline: "Projects, capabilities, and credibility in one place",
     description:
       "A professional construction company website focused on demonstrating completed work and operational capability. Services, project showcases, industries served, company information, and contact pathways are presented through a structured visual system.",
@@ -58,8 +58,8 @@ const demoProjects = [
     accent: "cobalt",
   },
   {
-    id: "dental-clinic",
-    title: "Dental Clinic",
+    id: "luma",
+    title: "Luma Dental",
     tagline: "Clear information for better patient decisions",
     description:
       "A modern dental clinic website designed around trust and appointment conversion. Treatment information, dental services, team details, patient-focused content, appointment calls to action, and contact information are organized for quick access.",
@@ -69,8 +69,8 @@ const demoProjects = [
     accent: "flame",
   },
   {
-    id: "hotel-resort",
-    title: "Hotel & Resort",
+    id: "vanta",
+    title: "VANTA",
     tagline: "A digital experience built around the stay",
     description:
       "A premium hospitality website that uses visual storytelling to present rooms, suites, amenities, dining, experiences, galleries, location information, and booking actions. Motion and immersive imagery reinforce the feeling of the property.",
@@ -91,8 +91,8 @@ const demoProjects = [
     accent: "flame",
   },
   {
-    id: "architecture-studio",
-    title: "Architecture Studio",
+    id: "arceron",
+    title: "ARCERON",
     tagline: "Architecture presented as visual editorial",
     description:
       "An editorial-style architecture portfolio built around large imagery, whitespace, structured grids, and strong typography. Project archives, detailed project pages, galleries, studio information, and contact flows give the work room to lead the experience.",
