@@ -23,7 +23,7 @@ const demoProjects = [
       "A modern fitness website built to make programs, classes, trainers, facilities, and membership information easy to understand. The interface uses clear hierarchy and purposeful interactions to guide visitors toward joining.",
     stack: ["React", "Tailwind CSS", "JavaScript"],
     code: "",
-    demo: "forge-athletics-eight.vercel.app",
+    demo: "https://forge-athletics-eight.vercel.app",
     accent: "cobalt",
   },
   {
@@ -47,7 +47,7 @@ const demoProjects = [
       "A premium real estate experience centered on property discovery. Large imagery, structured listings, property categories, search and filtering, property details, agent information, and inquiry flows make the experience practical as well as visual.",
     stack: ["React", "Tailwind CSS", "JavaScript"],
     code: "",
-    demo: "",
+    demo: "https://vanta-lyart-two.vercel.app/",
     accent: "flame",
   },
   {

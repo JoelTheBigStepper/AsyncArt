@@ -32,7 +32,7 @@ export default function Works() {
 
   const activeProjects = mode === "real" ? demoProjects : demoProject;
   const visibleProjects = activeProjects.slice(0, 6);
-  const projectGroupTitle = mode === "real" ? "Real-World Products" : "Client & Demo Work";
+  const projectGroupTitle = mode === "real" ? "Real-World Products" : "Demo Work";
 
   return (
     <section
